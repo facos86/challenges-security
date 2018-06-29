@@ -20,8 +20,8 @@ public class StatsService {
     public Optional<Stats> retrieveStats(String type) {
         Class<? extends Stats> statsType = Stats.getRealClass();
         String theQuery = "SELECT DISTINCT v FROM Stats s" +
-                        " WHERE c.date > NOW() " +
-                        " AND c.type = " + type,
+                        " WHERE s.date > NOW() " +
+                        " AND s.type = " + type,
             statsType.getSimpleName());
         try {
             List<? extends Stats> result = this.jpa.em().createQuery(theQuery, statsType)
