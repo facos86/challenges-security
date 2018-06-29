@@ -1,0 +1,37 @@
+# Ignore all dotfiles
+.*
+# Except for .gitignore and some config files
+!.gitignore
+!.github
+!.github/*
+!.editorconfig
+!.pullapprove.yml
+
+# Ignore all config files
+/conf/*
+# except for i18n
+!/conf/messages
+!/conf/messages.*
+# routes: because the project won't compile without valid routes
+!/conf/routes
+# JPA config files
+!/conf/META-INF
+# log configuration files
+!/conf/log4j2.xml
+!/conf/log4j2-prod.xml
+# and public application configuration
+!/conf/application.conf
+!/conf/secrets.example.conf
+
+logs
+target
+daemons
+.eclipse
+.idea_modules
+.classpath
+.project
+.settings
+RUNNING_PID
+project/project/
+
+
