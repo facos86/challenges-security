@@ -87,8 +87,6 @@ public class S3Utils {
 
             Date expirationDate = new Date();
 
-            expirationDate.setTime(Instant.now().plus(Period.ofDays((int) expirationDays)).toEpochMilli());
-
             GeneratePresignedUrlRequest generatePresignedUrlRequest = new GeneratePresignedUrlRequest(bucketName, key)
                     .withMethod(HttpMethod.GET)
                     .withExpiration(expirationDate);
