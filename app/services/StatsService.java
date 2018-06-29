@@ -28,7 +28,7 @@ public class StatsService {
                      .getResultList();
             return result;
         } catch (Exception e) {
-            logger.error("findCardsByType", e);
+            logger.error("StatsService", e);
             return Collections.emptyList();
         }
     }
