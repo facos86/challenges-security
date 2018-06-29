@@ -2,11 +2,17 @@ package controllers;
 
 import play.mvc.Controller;
 import play.mvc.Result;
+import services.StatsService;
 
 public class Statistics extends Controller {
+
     private final StatsService service;
+
+    public Statistics(StatsService service) {
+        this.service = service;
+    }
+
     /**
-     *
      * @return 200 (ok)
      */
     public Result getStatistics(String statType) {
